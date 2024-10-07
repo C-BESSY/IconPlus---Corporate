@@ -23,7 +23,20 @@ class SalesUserResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('name')
+                    ->label('Nama')
+                    ->placeholder('Nama Lengkap disarankan')
+                    ->columnSpan(2)
+                    ->required(),
+                Forms\Components\TextInput::make('email')
+                    ->label('Email Address')
+                    ->placeholder('Alamat email yang aktif')
+                    ->columnSpan(2)
+                    ->required(),
+                Forms\Components\TextInput::make('password')
+                    ->placeholder('Masukkan password')
+                    ->columnSpan(2)
+                    ->required(),
             ]);
     }
 
@@ -31,7 +44,10 @@ class SalesUserResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('email')
+                    ->searchable(),
             ])
             ->filters([
                 //
