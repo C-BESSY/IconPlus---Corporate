@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\IoResource\Pages;
+namespace App\Filament\Admin\Resources\IoResource\Pages;
 
-use App\Filament\Resources\IoResource;
+use App\Filament\Admin\Resources\IoResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 

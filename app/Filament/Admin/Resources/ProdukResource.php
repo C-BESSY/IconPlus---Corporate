@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Admin\Filament\Resources;
 
-use App\Filament\Resources\ProdukResource\Pages;
+use App\Filament\Admin\Resources\ProdukResource\Pages;
 use App\Filament\Resources\ProdukResource\RelationManagers;
 use App\Models\Produk;
 use Filament\Forms;

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Admin\Resources;
 
-use App\Filament\Resources\InstalasiResource\Pages;
+use App\Filament\Admin\Resources\InstalasiResource\Pages;
 use App\Filament\Resources\InstalasiResource\RelationManagers;
 use App\Models\Instalasi;
 use Filament\Forms;

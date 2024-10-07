@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Admin\Resources;
 
-use App\Filament\Resources\KendalaResource\Pages;
+use App\Filament\Admin\Resources\KendalaResource\Pages;
 use App\Filament\Resources\KendalaResource\RelationManagers;
 use App\Models\Kendala;
 use Filament\Forms;

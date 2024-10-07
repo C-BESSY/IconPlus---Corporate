@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Admin\Resources;
 
-use App\Filament\Resources\AktivasiResource\Pages;
+use App\Filament\Admin\Resources\AktivasiResource\Pages;
 use App\Filament\Resources\AktivasiResource\RelationManagers;
 use App\Models\Aktivasi;
 use Filament\Forms;

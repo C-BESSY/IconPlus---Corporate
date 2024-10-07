@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\KendalaResource\Pages;
+namespace App\Filament\Admin\Resources\KendalaResource\Pages;
 
-use App\Filament\Resources\KendalaResource;
+use App\Filament\Admin\Resources\KendalaResource;
 use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Admin\Resources;
 
-use App\Filament\Resources\PermohonanResource\Pages;
+use App\Filament\Admin\Resources\PermohonanResource\Pages;
 use App\Filament\Resources\PermohonanResource\RelationManagers;
 use App\Models\Permohonan;
 use Filament\Forms;
