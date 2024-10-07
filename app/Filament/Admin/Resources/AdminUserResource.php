@@ -33,11 +33,6 @@ class AdminUserResource extends Resource
                     ->placeholder('Alamat email yang aktif')
                     ->columnSpan(2)
                     ->required(),
-                Forms\Components\TextInput::make('password')
-                    ->label('Password')
-                    ->placeholder('Password')
-                    ->columnSpan(2)
-                    ->required(),
             ]);
     }
 
