@@ -14,8 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => env('AUTH_GUARD', 'web'),
-        'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
+        'guard' => 'admin',
+        'passwords' => 'admin_users',
     ],
 
     /*
@@ -36,9 +36,25 @@ return [
     */
 
     'guards' => [
-        'web' => [
+        'admin' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'admin_users',
+        ],
+        'aktivasi' => [
+            'driver' => 'session',
+            'provider' => 'aktivasi_users',
+        ],
+        'har' => [
+            'driver' => 'session',
+            'provider' => 'har_users',
+        ],
+        'aset' => [
+            'driver' => 'session',
+            'provider' => 'aset_users',
+        ],
+        'sales' => [
+            'driver' => 'session',
+            'provider' => 'sales_users',
         ],
     ],
 
@@ -60,15 +76,26 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'admin_users' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
+            'model' => App\Models\AdminUser::class,
         ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'aktivasi_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\AktivasiUser::class,
+        ],
+        'har_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\HarUser::class,
+        ],
+        'aset_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\AsetUser::class,
+        ],
+        'sales_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\SalesUser::class,
+        ],
     ],
 
     /*
@@ -91,8 +118,8 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'admin_users' => [
+            'provider' => 'admin_users',
             'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
             'expire' => 60,
             'throttle' => 60,
