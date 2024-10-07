@@ -23,7 +23,18 @@ class AktivasiUserResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('name')
+                    ->placeholder('Nama')
+                    ->columnSpan(2)
+                    ->required(),
+                Forms\Components\TextInput::make('email')
+                    ->placeholder('Alamat email aktif')
+                    ->columnSpan(2)
+                    ->required(),
+                Forms\Components\TextInput::make('password')
+                    ->placeholder('Masukkan password')
+                    ->columnSpan(2)
+                    ->required(),
             ]);
     }
 
@@ -31,7 +42,10 @@ class AktivasiUserResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('email')
+                    ->searchable(),
             ])
             ->filters([
                 //
